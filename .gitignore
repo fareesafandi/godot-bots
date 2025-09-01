@@ -1,5 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
+<<<<<<< HEAD
+=======
 .nomedia
 
 # Godot-specific ignores
@@ -14,3 +16,4 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+>>>>>>> 4a16cc9cbe1443dc1fca2b93194535df17ae9f88
