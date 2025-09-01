@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkqi01t3wfmrj"]
+
+[ext_resource type="PackedScene" uid="uid://dplyt18lbjiij" path="res://level_1.tscn" id="1_56l4g"]
+[ext_resource type="Script" path="res://main.gd" id="1_x6gmy"]
+[ext_resource type="PackedScene" uid="uid://bybbs0c2dahoq" path="res://enemy_bots[flying eye].tscn" id="2_0op7d"]
+[ext_resource type="PackedScene" uid="uid://1uywkd6oiip1" path="res://player_dummy.tscn" id="4_t0xu0"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_x6gmy")
+
+[node name="Level 1" parent="." instance=ExtResource("1_56l4g")]
+position = Vector2(0, -1)
+
+[node name="EnemyBots" parent="." instance=ExtResource("2_0op7d")]
+
+[node name="PlayerDummy" parent="." instance=ExtResource("4_t0xu0")]
+
+[connection signal="hit_enemy" from="PlayerDummy" to="." method="_on_player_hit_enemy"]
